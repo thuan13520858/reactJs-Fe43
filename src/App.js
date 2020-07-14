@@ -4,7 +4,11 @@ import './App.css';
 import Header from './Components/Header';
 import BaiTapLayout from './Components/BaiTapLayOut/BaiTapLayout';
 import BT2Layout from './Components/BaiTapLayout2/BT2Layout';
-import DataBinding from './DataBinding/DataBinding';
+import DataBinding from './Components/DataBinding/DataBinding';
+import EventBinding from './Components/EventBinding/EventBinding';
+import RenderWithState from './Components/RenderWithState/RenderWithState';
+import BaiTapStateCar from './Components/BaiTapStateCar/BaiTapStateCar';
+import RenderWithMap from './Components/RenderWithState/RenderWithMap/RenderWithMap';
 
 function App() {
   return (
@@ -24,7 +28,11 @@ function App() {
         </a>
       </header> */}
       {/* <Header /> */}
-      <DataBinding />
+      {/* <DataBinding /> */}
+      {/* <EventBinding /> */}
+      {/* <RenderWithState /> */}
+      {/* <BaiTapStateCar /> */}
+      <RenderWithMap />
     </div>
   );
 }
