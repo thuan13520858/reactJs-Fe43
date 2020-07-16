@@ -9,6 +9,8 @@ import EventBinding from './Components/EventBinding/EventBinding';
 import RenderWithState from './Components/RenderWithState/RenderWithState';
 import BaiTapStateCar from './Components/BaiTapStateCar/BaiTapStateCar';
 import RenderWithMap from './Components/RenderWithState/RenderWithMap/RenderWithMap';
+import ExampleGlasses from './Components/ExampleGlasses/ExampleGlasses';
+import DemoProps from './Components/Props/DemoProps';
 
 function App() {
   return (
@@ -27,12 +29,15 @@ function App() {
           Learn React
         </a>
       </header> */}
+      <BaiTapLayout />
       {/* <Header /> */}
       {/* <DataBinding /> */}
       {/* <EventBinding /> */}
       {/* <RenderWithState /> */}
       {/* <BaiTapStateCar /> */}
-      <RenderWithMap />
+      {/* <RenderWithMap /> */}
+      {/* <ExampleGlasses /> */}
+      <DemoProps />
     </div>
   );
 }

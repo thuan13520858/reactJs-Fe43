@@ -1,0 +1,53 @@
+.area-Style {
+    background: #e9ecef;
+    padding: 20px 30px;
+}
+.leftBox {
+    box-shadow: 3px 3px 5px 6px #ccc;
+}
+.rightBox {
+    box-shadow: 3px 3px 5px 6px #ccc;
+    position: relative;
+}
+
+.title {
+    text-align: left;
+}
+
+.content {
+    background-color: #000000ab;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.priceStyle {
+    background: #DC3546;
+    padding: 5px;
+}
+
+.priceType {
+    color: green;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.imgStyle {
+    height: 100%;
+    object-position: center;
+    object-fit: scale-down;
+}
+
+.boxItem {
+    background: white;
+    background-clip: content-box;
+}
+
+.glass {
+    position: absolute;
+    width: 250px;
+    top: 120px;
+    left: 112px;
+}
