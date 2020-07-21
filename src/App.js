@@ -11,6 +11,7 @@ import BaiTapStateCar from './Components/BaiTapStateCar/BaiTapStateCar';
 import RenderWithMap from './Components/RenderWithState/RenderWithMap/RenderWithMap';
 import ExampleGlasses from './Components/ExampleGlasses/ExampleGlasses';
 import DemoProps from './Components/Props/DemoProps';
+import ExampleCard from './Components/LiftingUpState/ExampleCard';
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <BaiTapLayout />
+      {/* <BaiTapLayout /> */}
       {/* <Header /> */}
       {/* <DataBinding /> */}
       {/* <EventBinding /> */}
@@ -37,7 +38,8 @@ function App() {
       {/* <BaiTapStateCar /> */}
       {/* <RenderWithMap /> */}
       {/* <ExampleGlasses /> */}
-      <DemoProps />
+      {/* <DemoProps /> */}
+      <ExampleCard />
     </div>
   );
 }
