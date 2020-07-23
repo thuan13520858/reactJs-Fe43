@@ -12,6 +12,7 @@ import RenderWithMap from './Components/RenderWithState/RenderWithMap/RenderWith
 import ExampleGlasses from './Components/ExampleGlasses/ExampleGlasses';
 import DemoProps from './Components/Props/DemoProps';
 import ExampleCard from './Components/LiftingUpState/ExampleCard';
+import BaiTapGioHang from './Components/BaiTapRedux/BaiTapGioHang/BaiTapGioHang';
 
 function App() {
   return (
@@ -39,7 +40,8 @@ function App() {
       {/* <RenderWithMap /> */}
       {/* <ExampleGlasses /> */}
       {/* <DemoProps /> */}
-      <ExampleCard />
+      {/* <ExampleCard /> */}
+      <BaiTapGioHang />
     </div>
   );
 }
