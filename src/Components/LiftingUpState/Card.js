@@ -21,11 +21,11 @@ class Card extends Component {
           <td>{item.tenSP}</td>
           <td>{item.giaBan}$</td>
           <td>
-            <button className="btn btn-info">-</button>
+            <button className="btn btn-info" onClick = {() => this.props.changCountProduct(item.maSP, false)}>-</button>
             <span className="mx-2">{item.cnt}</span>
-            <button className="btn btn-info">+</button>
+            <button className="btn btn-info" onClick = {() => this.props.changCountProduct(item.maSP, true)}>+</button>
           </td>
-          <td>{item.giaBan * item.cnt}</td>
+          <td>{(item.giaBan * item.cnt).toLocaleString()}</td>
           <td>
             <button
               className="btn btn-danger"
@@ -63,7 +63,7 @@ class Card extends Component {
               <td />
               <td />
               <td />
-              <td>{this.state.total}</td>
+              <td>{this.state.total.toLocaleString()}</td>
             </tr>
           </tfoot>
         </table>

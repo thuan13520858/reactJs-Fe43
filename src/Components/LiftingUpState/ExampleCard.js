@@ -43,16 +43,43 @@ class ExampleCard extends Component {
     let newCard = [...this.state.cardList];
     newCard.splice(index, 1);
     this.setState({
-        cardList: newCard,
+      cardList: newCard,
     });
-  }
+  };
+
+  // xử lý tăng giảm số lượng
+  /**
+   *
+   * @param {*} idCard
+   * @param {*} flg : true: tăng, false: giảm
+   */
+  changCountProduct = (idCard, flg) => {
+    const index = this.state.cardList.findIndex(
+      (element) => element.maSP == idCard
+    );
+    let newCard = [...this.state.cardList];
+    if (flg) {
+      newCard[index].cnt += 1;
+    } else {
+      newCard[index].cnt -= 1;
+      if (newCard[index].cnt == 0) {
+        newCard.splice(index, 1);
+      }
+    }
+    this.setState({
+      cardList: newCard
+    });
+  };
 
   render() {
     let { proSelected } = this.state;
     return (
       <div className="container">
-        <Card cardList={this.state.cardList} 
-              deleteProduct = {this.deleteProduct}/>
+        <Card
+          cardList={this.state.cardList}
+          deleteProduct={this.deleteProduct}
+          changCountProduct={this.changCountProduct}
+        />
         <ProductList
           proList={this.state.proList}
           handleSelected={this.handleSelected}
