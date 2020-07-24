@@ -1,0 +1,8 @@
+Nơi lưu trữ state (Điều kiện lưu trữ state)
+
+1. Chưa giao diện được binding từ state
+(Trực tiếp hoặc gián tiếp)
+
+2. Chưa nút xử lý làm thay đổi state đó.
+
+* state ở đâu thì khai báo setState ở đó.
