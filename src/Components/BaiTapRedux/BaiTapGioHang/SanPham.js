@@ -26,7 +26,8 @@ class SanPham extends Component {
             >
               Chi tiết
             </button>
-            <button type="button" className="btn btn-danger">
+            <button type="button" className="btn btn-danger"
+              onClick = {() =>this.props.muaSanPham(sanPham)}>
               Mua
             </button>
           </div>
@@ -35,6 +36,7 @@ class SanPham extends Component {
     );
   }
 }
+
 
 // hàm lấy giá trị callback từ store về để đưa dữ liệ lên redux
 const mapDispatchToProps = (dispatch) => {
@@ -48,6 +50,14 @@ const mapDispatchToProps = (dispatch) => {
         sanPham
       }
 
+      dispatch(action);  // gửi lên reducer
+    },
+
+    muaSanPham: (sanPham) => {
+      const action = {
+        type: 'THEM_SAN_PHAM', // giá trị bắt buộc phải có
+        sanPham: sanPham
+      }
       dispatch(action);  // gửi lên reducer
     }
   }
