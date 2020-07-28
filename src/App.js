@@ -13,6 +13,7 @@ import ExampleGlasses from './Components/ExampleGlasses/ExampleGlasses';
 import DemoProps from './Components/Props/DemoProps';
 import ExampleCard from './Components/LiftingUpState/ExampleCard';
 import BaiTapGioHang from './Components/BaiTapRedux/BaiTapGioHang/BaiTapGioHang';
+import BaiTapBurgerMain from './Components/BaiTapRedux/BaiTapBurger/BaiTapBurgerMain';
 
 function App() {
   return (
@@ -41,7 +42,8 @@ function App() {
       {/* <ExampleGlasses /> */}
       {/* <DemoProps /> */}
       {/* <ExampleCard /> */}
-      <BaiTapGioHang />
+      {/* <BaiTapGioHang /> */}
+      <BaiTapBurgerMain />
     </div>
   );
 }

@@ -10,19 +10,21 @@ class GioHang extends Component {
         }
     }
 
+    total = 0;
     renderCard = () => {
         return this.props.gioHang.map((item, index) => {
+          this.total += item.giaBan * item.cnt;
           return (
             <tr key={index}>
               <td>{index + 1}</td>
               <td>
-                <img src={item.hinhAnh} alt="asda" style={{ width: 100 }} />
+                <img src={item.hinhAnh} alt="" style={{ width: 100 }} />
               </td>
               <td>{item.tenSP}</td>
               <td>{item.giaBan}$</td>
               <td>
                 <button className="btn btn-info" onClick = {() => this.props.changeCount(item.maSP, false)}>-</button>
-                <span className="mx-2">{item.cnt}</span>
+                <span className="mx-5"></span>
                 <button className="btn btn-info" onClick = {() => this.props.changeCount(item.maSP, true)}>+</button>
               </td>
               <td>{(item.giaBan * item.cnt).toLocaleString()}</td>
@@ -64,7 +66,7 @@ class GioHang extends Component {
                                 <td />
                                 <td />
                                 <td />
-                                <td></td>
+                                <td>{(this.total).toLocaleString()}</td>
                             </tr>
                         </tfoot>
                     </table>
@@ -86,7 +88,7 @@ const mapDispatchToProps = (dispatch) => {
             const action = {
                 type: 'XOA', // giá trị bắt buộc phải có
                 id : idSanPham
-              }
+            }
             dispatch(action);
         },
         /**
