@@ -14,6 +14,7 @@ class BaiTapBurgerMain extends Component {
     render() {
         return (
             <div className = "container">
+                <h1>dasa</h1>
                 <div className="row">
                    <div className="col-7">
                         <BaiTapBurgerComponent />

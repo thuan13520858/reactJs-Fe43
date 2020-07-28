@@ -14,7 +14,7 @@ const stateDefault = {
 
 const BaiTapBurgerReducer = (state = stateDefault, action) => {
     switch(action.type) {
-        case 'CHANGE_COUNT_BURGER' : {
+        case 'CHANGE_COUNT' : {
             let newBurger = {...state.burger};
             let newMenu = {};
             if (action.flg) {

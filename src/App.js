@@ -14,6 +14,8 @@ import DemoProps from './Components/Props/DemoProps';
 import ExampleCard from './Components/LiftingUpState/ExampleCard';
 import BaiTapGioHang from './Components/BaiTapRedux/BaiTapGioHang/BaiTapGioHang';
 import BaiTapBurgerMain from './Components/BaiTapRedux/BaiTapBurger/BaiTapBurgerMain';
+import GameBauCua from './Components/BaiTapRedux/BaiTapGameBauCua';
+
 
 function App() {
   return (
@@ -43,7 +45,8 @@ function App() {
       {/* <DemoProps /> */}
       {/* <ExampleCard /> */}
       {/* <BaiTapGioHang /> */}
-      <BaiTapBurgerMain />
+      {/* <BaiTapBurgerMain /> */}
+      <GameBauCua />
     </div>
   );
 }

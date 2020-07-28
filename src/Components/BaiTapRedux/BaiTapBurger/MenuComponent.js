@@ -72,7 +72,7 @@ const mapDispatchToProps = (dispatch) => {
          */
         changeCount : (flg, kind) => {
             const action = {
-                type: 'CHANGE_COUNT_BURGER',
+                type: 'CHANGE_COUNT',
                 flg: flg,
                 kind: kind
             }
