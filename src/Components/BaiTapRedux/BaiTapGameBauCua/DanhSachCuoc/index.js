@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
+import {datCuocAction} from '../../../redux/actions/GameBauCuaAction'
 
 class DanhSachCuoc extends Component {
     constructor(props) {
@@ -34,6 +35,9 @@ class DanhSachCuoc extends Component {
         );
       })
     }
+    showMsg = () => {
+      alert('aaaaaaaaaaaaaaaaa');
+    }
 
     render() {
         return (
@@ -55,12 +59,12 @@ const mapStatetoProps = (state) => {
 const mapDispatchtoProps = (dispatch) => {
   return {
     datCuoc : (id, flg) => {
-      const action = {
-        type: 'DAT_CUOC',
-        id: id,
-        flg: flg
-      }
-      dispatch(action);
+      // const action = {
+      //   type: 'DAT_CUOC',
+      //   id: id,
+      //   flg: flg
+      // }
+      dispatch(datCuocAction(id, flg));
     }
   }
 }

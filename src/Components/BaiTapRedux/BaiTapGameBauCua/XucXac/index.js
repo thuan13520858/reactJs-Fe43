@@ -6,7 +6,7 @@ class XucXac extends Component {
         super(props)
 
         this.state = {
-                 
+        
         }
     }
 

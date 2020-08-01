@@ -15,6 +15,7 @@ import ExampleCard from './Components/LiftingUpState/ExampleCard';
 import BaiTapGioHang from './Components/BaiTapRedux/BaiTapGioHang/BaiTapGioHang';
 import BaiTapBurgerMain from './Components/BaiTapRedux/BaiTapBurger/BaiTapBurgerMain';
 import GameBauCua from './Components/BaiTapRedux/BaiTapGameBauCua';
+import GameTaiXiu from './Components/GamTaiXiu';
 
 
 function App() {
@@ -46,7 +47,8 @@ function App() {
       {/* <ExampleCard /> */}
       {/* <BaiTapGioHang /> */}
       {/* <BaiTapBurgerMain /> */}
-      <GameBauCua />
+      {/* <GameBauCua /> */}
+      <GameTaiXiu />
     </div>
   );
 }

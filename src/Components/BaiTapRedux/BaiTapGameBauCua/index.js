@@ -3,6 +3,7 @@ import './style.css'
 import DanhSachCuoc from "./DanhSachCuoc";
 import XucXac from "./XucXac";
 import { connect } from "react-redux";
+import * as  CONST from '../../redux/Constants/GameBauCuaConst'
 
 class GameBauCua extends Component {
   constructor(props) {
@@ -45,11 +46,11 @@ const mapStatetoProps = state => {
     }
 }
 
-const mapDispatchtoProps = (dispatch) => {
+const mapDispatchtoProps = (dispatch, ownProps) => {
     return {
         playGame : () => {
             const action = {
-                type: 'PLAY_GAME'
+                type: CONST.PLAY_GAME
             }
             dispatch(action);
         }

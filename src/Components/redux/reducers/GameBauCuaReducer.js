@@ -1,3 +1,6 @@
+import {getRandomInt} from '../../../utils/randomInt';
+import  * as CONST from '../Constants/GameBauCuaConst';
+
 const initialState = {
     total: 100,
     danhSachCuoc : [
@@ -54,7 +57,7 @@ const initialState = {
 
 const GameBauCuaReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'DAT_CUOC': {
+        case CONST.TANG_GIAM : {
             let newState = [...state.danhSachCuoc];
             const index = newState.findIndex((element) => element.id == action.id);
             if (action.flg) {
@@ -70,32 +73,30 @@ const GameBauCuaReducer = (state = initialState, action) => {
             }
             return {...state, danhSachCuoc: newState}
         }
-        case 'PLAY_GAME': {
+        case CONST.PLAY_GAME: {
             let newXucXac = [...state.xucXac];
             let newDanhSachCuoc = [...state.danhSachCuoc];
             newXucXac = newXucXac.map((item, index) => {
-                let idx = Math.floor(Math.random()*6);
-                return ({
-                    id : state.danhSachCuoc[idx].id,
-                    url : state.danhSachCuoc[idx].url,
-                    price : state.danhSachCuoc[idx].price,
-                })
+                let idx = getRandomInt(6);
+                return state.danhSachCuoc[idx]
             });
-            for (let item of newDanhSachCuoc) {
-               if (item.price > 0) {
-                   let priceWin = newXucXac.reduce((sum, e) => {
+
+            let cuoc = newDanhSachCuoc.filter((ele) => ele.price >0);
+
+            for (let item of cuoc) {
+                let priceWin = newXucXac.reduce((sum, e) => {
                         if (item.id == e.id) {
                             sum = sum + e.price;
                         }
                         return sum;
-                   }, 0);
-                   if (priceWin > 0) {
-                    state.total += item.price + priceWin;
-                   }
-                   item.price = 0;
-               }
+                    }, 0);
+                
+                state.total += priceWin > 0 && item.price + priceWin;
+                item.price = 0;
             }
-            return {...state, danhSachCuoc: newDanhSachCuoc, xucXac: newXucXac}
+            state.danhSachCuoc = newDanhSachCuoc;
+            state.xucXac = newXucXac;
+            return {...state}
         }
         default : 
             return {...state}
