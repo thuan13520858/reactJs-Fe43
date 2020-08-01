@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import * as Action from '../../redux/actions/GameTaiXiuAction'
 
 class Control extends Component {
     constructor(props) {
@@ -30,35 +31,19 @@ class Control extends Component {
                   <button
                     className="btn btn-lg rounded-circle"
                     style={{ overflow: "hidden" }}
+                    onClick = {()=> {this.props.selectType(true)}}
                   >
                     <img src="./img/tai.PNG" alt="tai" />
                   </button>
                 </div>
                 <div className="col-4 d-flex align-items-center justify-content-around">
-                  {/* <span>
-                    <i
-                      className="fa fa-dice-one"
-                      style={{ color: "white", fontSize: 150 }}
-                    />
-                  </span>
-                  <span>
-                    <i
-                      className="fa fa-dice-two"
-                      style={{ color: "white", fontSize: 150 }}
-                    />
-                  </span>
-                  <span>
-                    <i
-                      className="fa fa-dice-six"
-                      style={{ color: "white", fontSize: 150 }}
-                    />
-                  </span> */}
                     {this.renderXucXac()}
                 </div>
                 <div className="col-4">
                   <button
                     className="btn btn-lg rounded-circle"
                     style={{ overflow: "hidden" }}
+                    onClick = {()=>{this.props.selectType(false)}}
                   >
                     <img src="./img/xiu.PNG" alt="xiu" />
                   </button>
@@ -69,6 +54,13 @@ class Control extends Component {
     }
 }
 
+const mapDispatchtoProps = (dispatch, ownState) => {
+  return {
+   selectType : (flg) => {
+      dispatch(Action.selecType(flg));
+   }
+  }
+}
 
 const mapStatetoProps = (state) => {
     return {
@@ -76,5 +68,4 @@ const mapStatetoProps = (state) => {
     }
 }
 
-// export default Control
-export default connect(mapStatetoProps)(Control)
+export default connect(mapStatetoProps, mapDispatchtoProps)(Control)

@@ -1,3 +1,6 @@
+import * as CONST from '../Constants/GameTaiXiuConst'
+import {getRandomInt} from '../../../utils/randomInt';
+
 const danhSachXucXac = [
     { ma: "one", classes: "fa fa-dice-one", so: 1 },
     { ma: "two", classes: "fa fa-dice-two", so: 2 },
@@ -20,6 +23,23 @@ const inititalState = {
 
 const GameTaiXiuReducer = (state = inititalState, action) =>{
     switch (action.type) {
+        case CONST.SELECT_TYPE : {
+            state.taiXiu = action.flg;
+            return {...state}
+        }
+        case CONST.PLAY_GAME_TAI_XIU: {
+            state.soBanChoi +=1;
+            state.xucXac = [
+                danhSachXucXac[getRandomInt(6)],
+                danhSachXucXac[getRandomInt(6)],
+                danhSachXucXac[getRandomInt(6)]
+            ]
+            const total = state.xucXac.reduce((sum, item) => {
+                return sum + item.so;
+            }, 0);
+            state.soBanThang += (total > 0 && total < 11) ? 1 : 0 ;
+            return {...state}
+        }
         default : {
             return {...state}
         }
