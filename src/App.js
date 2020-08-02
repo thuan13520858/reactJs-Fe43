@@ -35,7 +35,7 @@ function App() {
           Learn React
         </a>
       </header> */}
-      {/* <BaiTapLayout /> */}
+      <BaiTapLayout />
       {/* <Header /> */}
       {/* <DataBinding /> */}
       {/* <EventBinding /> */}
@@ -48,7 +48,7 @@ function App() {
       {/* <BaiTapGioHang /> */}
       {/* <BaiTapBurgerMain /> */}
       {/* <GameBauCua /> */}
-      <GameTaiXiu />
+      {/* <GameTaiXiu /> */}
     </div>
   );
 }

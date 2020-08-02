@@ -12,6 +12,7 @@ class BTCarousel extends Component {
     render() {
         return (
             <div>
+                <h1 className = 'demo'>ABC2</h1>
                 <div id="demo" className="carousel slide" data-ride="carousel">
                     {/* Indicators */}
                     <ul className="carousel-indicators">

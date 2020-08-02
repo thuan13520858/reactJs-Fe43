@@ -4,6 +4,7 @@ import BTHeader from './BTHeader'
 import BTCarousel from './BTCarousel'
 import BTProductList from './BTProductList'
 import BTFooter from './BTFooter'
+import './style.scss'
 
 class BaiTapLayout extends Component {
     constructor(props) {
@@ -18,6 +19,7 @@ class BaiTapLayout extends Component {
     render() {
         return (
             <div>
+                <h1 className = 'demo'>ABC</h1>
                <BTHeader />
                <BTCarousel />
                <BTProductList />
