@@ -16,6 +16,9 @@ import BaiTapGioHang from './Components/BaiTapRedux/BaiTapGioHang/BaiTapGioHang'
 import BaiTapBurgerMain from './Components/BaiTapRedux/BaiTapBurger/BaiTapBurgerMain';
 import GameBauCua from './Components/BaiTapRedux/BaiTapGameBauCua';
 import GameTaiXiu from './Components/GamTaiXiu';
+import Form_Validation from './Components/BaiTapRedux/Form_Validation/Form_Validation';
+import QLSV from './Components/BaiTapRedux/Form_Validation/QLSV';
+import ReactLifeCycle from './Components/ReactLifeCycle/ReactLifeCycle';
 
 
 function App() {
@@ -35,7 +38,7 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <BaiTapLayout />
+      {/* <BaiTapLayout /> */}
       {/* <Header /> */}
       {/* <DataBinding /> */}
       {/* <EventBinding /> */}
@@ -49,6 +52,9 @@ function App() {
       {/* <BaiTapBurgerMain /> */}
       {/* <GameBauCua /> */}
       {/* <GameTaiXiu /> */}
+      <QLSV />
+      {/* <ReactLifeCycle /> */}
+
     </div>
   );
 }
